@@ -1,0 +1,29 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"      # S upports package.json
+    directory: "/"                # Root directory of the project
+    schedule:
+      interval: "daily"            # Check for updates every day
+    open-pull-requests-limit: 50    # Maximum of 5 open PRs at a time
+    commit-message:
+      prefix: "chore(deps):"       # PR title prefix
+    labels:
+      - "dependencies"
+      - "security"
+    reviewers:
+      - "your-github-username"     # Replace with your GitHub username
+    assignees:
+      - "your-github-username"     # Assign PRs to you (optional)
+    allow:
+      - dependency-type: "all"     # Allow updates for all dependencies
+    ignore:
+      - dependency-name: "express" # Example: Ignore Express updates
+        versions: ["4.x"]          # Ignore Express v4 updates
+    rebase-strategy: "auto"        # Auto-rebase PRs if conflicts occur
+    versioning-strategy: "increase" # Use a safe versioning strategy
+
+  # GitHub Actions updates (optional)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

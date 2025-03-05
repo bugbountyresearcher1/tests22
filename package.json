@@ -1,0 +1,19 @@
+{
+  "name": "vulnerable-app",
+  "version": "1.0.0",
+  "description": "A deliberately vulnerable Node.js application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "lodash": "3.17.21",    
+    "express": "4.16.0",      
+    "debug": "2.6.8",        
+    "marked": "0.3.6",     
+    "mongoose": "5.9.5"
+  },
+  "devDependencies": {
+    "jquery": "5.4.1"          
+  }
+}
